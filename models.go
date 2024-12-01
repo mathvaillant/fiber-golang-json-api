@@ -12,7 +12,6 @@ type User struct {
 	ID       uint   `json:"id" gorm:"primaryKey"`
 	Username string `json:"username"`
 	Password string `json:"-"` // - Prevents marshalling to JSON
-	Books    []Book `json:"books" gorm:"foreignKey:UserID"`
 }
 
 type Book struct {
